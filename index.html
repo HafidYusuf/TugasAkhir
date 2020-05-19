@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Dashboard || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+
+
+    <nav>
+        <!--<a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>-->
+        <img src="img/profile/1.png"  class="profile" />
+        <div class="name">Laura Cyntia</div>
+        <div class="class">X IPA 2</div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-list active">
+                    <img src="img/icons/dashboard.svg" />
+                    <p>Dashboard</p>
+                </div>
+            </a>
+            <a href="progress.html">
+                <div class="menu-list">
+                    <img src="img/icons/progress.svg" />
+                    <p>Progress</p>
+                </div>
+            </a>
+            <a href="schedule.html">
+                <div class="menu-list">
+                    <img src="img/icons/schedule.svg" />
+                    <p>Schedule</p>
+                </div>
+            </a>
+            <a href="discussion.html">
+                <div class="menu-list">
+                    <img src="img/icons/discussion.svg" />
+                    <p>Discussion</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="logout">
+            <img src="img/icons/logout.svg" />
+            <p>Log Out</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+        <br/>
+        <div class="box-one">
+            <img class="just-accessories" src="img/accessories.svg" />
+            <p>Today's Subject is :</p>
+            <div class="underline-container">
+                <h1>IPA</h1>
+            </div>
+            <br>
+            <p class="guru">With:<br>Ibu Jessica Rabi</p>
+            <span class="filled-progress">Progress : 34%</span>
+            <a href="mapel.html">
+                <div class="box-one-button">
+                    <div class="circle-hover"></div>
+                    <span>Read Now</span>
+                </div>
+            </a>
+        </div>
+        <div class="box-two">
+            <div class="box-two-description">
+                <h2>Hello Laura,</h2>
+                <p>You have already studied 24% from all your subject. <strong>Keep going to your goal</strong></p>
+            </div>
+            <img src="img/female study.svg">
+        </div>
+
+        <div class="graph">
+            <a href="progress.html"><p><strong>Your Progress</strong></p></a>
+            <div class="graph-labeling"><div class="graph-labeling-color"></div> Finished</div>
+            <div class="just-line"></div>
+            <canvas id="myChart" width="1000" height="400"></canvas>
+        </div>
+
+        <div class="discussion-sidebar">
+            <p><strong>Recent Discussion</strong></p>
+            <div class="graph-labeling" style="top: 50px"><a href="progress.html">view all</a></div>
+            <a href="discussion-single.html">
+                <div class="discussion-sidebar-box">
+                    <img src="img/profile/1.png">
+                    <h4>Gina Rosinta</h4>
+                    <div class="discussion-sidebar-box-date">4 Days Ago</div>
+                    <p>Ini penjelasan tentang materi kemaren yang belum sempat dijelaskan</p>
+                </div>
+            </a>
+            <a href="discussion-single.html">
+                <div class="discussion-sidebar-box">
+                    <img src="img/profile/1.png">
+                    <h4>Gina Rosinta</h4>
+                    <div class="discussion-sidebar-box-date">4 Days Ago</div>
+                    <p>Ini penjelasan tentang materi kemaren yang belum sempat dijelaskan</p>
+                </div>
+            </a>
+        </div>
+    
+        <div class="bottom-accessories-container"></div>
+
+        <p><strong>Today's Schedule</strong></p>
+        <div class="dashboard-schedule-container">
+            <div class="gradient-blocker"></div>
+
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+            <div class="dashboard-schedule-box">
+                <div class="underline-container">
+                    <h1>IPA</h1>
+                </div>
+                <div class="dashboard-schedule-time">
+                    <img src="img/icons/clock.svg">
+                    <p>08:30 - 10:00</p>
+                </div>
+                <div class="dashboard-schedule-teacher">
+                    <p>Ibu Jesica Iskandar</p>
+                </div>
+                <div class="dashboard-schedule-progress">Progress : 34%</div>
+                <div class="dashboard-schedule-bottomline"></div>
+            </div>
+        </div>
+        <img class="bottom-accessories" src="img/accessories2.png" style="opacity: .3;">
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.dashboard-schedule-container').on('scroll', function() {
+            var top =
+                $('.dashboard-schedule-container').scrollLeft();
+            // $('.header').css('left', -top);
+            console.log(top);
+            $('.gradient-blocker').css('left', top);
+        });
+
+        const slider = document.querySelector('.dashboard-schedule-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1.5; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+            console.log(walk);
+        
+        });
+    </script>
+    <script>
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['MTK', 'IPA', 'IND', 'KWH', 'SJR'],
+                datasets: [{
+                    label: 'Finished',
+                    data: [20, 10, 30, 20, 50],
+                    borderWidth: 2,
+                    borderColor: 'rgba(80,86,158,1)',
+                    backgroundColor: 'rgba(80,86,158,0.2)',
+                    pointBorderColor: '#FFFFFF',
+                    pointBackgroundColor: 'rgba(255,109,100,1)'
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItems, data) { 
+                            return "progrees: " + tooltipItems.yLabel + ' %';
+                        }
+                    }
+                },
+                backgroundColor: 'rgba(80,86,158,1)',
+                layout: {
+                    padding: {top: 30}
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            borderDash: [2, 10],
+                            color: ['rgba(0,0,0,.2)','rgba(0,0,0,.2)','rgba(0,0,0,.2)','rgba(0,0,0,.2)','rgba(0,0,0,.2)'],
+                            lineWidth: 2
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            lineHeight: 4,
+                            display: false,
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>

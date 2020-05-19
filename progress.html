@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Progress Belajar || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+
+
+    <nav>
+        <!--<a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>-->
+        <img src="img/profile/1.png"  class="profile" />
+        <div class="name">Laura Cyntia</div>
+        <div class="class">X IPA 2</div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-list">
+                    <img src="img/icons/dashboard.svg" />
+                    <p>Dashboard</p>
+                </div></a>
+            <a href="progress.html">
+                <div class="menu-list active">
+                    <img src="img/icons/progress.svg" />
+                    <p>Progress</p>
+                </div></a>
+            <a href="schedule.html">
+                <div class="menu-list">
+                    <img src="img/icons/schedule.svg" />
+                    <p>Schedule</p>
+                </div></a>
+            <a href="discussion.html">
+                <div class="menu-list">
+                    <img src="img/icons/discussion.svg" />
+                    <p>Discussion</p>
+                </div></a>
+        </div>
+
+        <div class="logout">
+            <img src="img/icons/logout.svg" />
+            <p>Log Out</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+        <br/>
+        <div class="box-two" style="margin-right: 2%; margin-left: 0px;">
+            <div class="box-two-description">
+                <h2>Your Progress</h2>
+                <p>You did a good job on <strong>IPA</strong>, but I think you need to catch up on <strong>KWH</strong></p>
+            </div>
+            <img src="img/female study.svg">
+        </div>
+
+        <div class="box-one">
+            <img class="just-accessories" src="img/accessories.svg" />
+            <p class="penjabaran">Laura, you are <span style="font-size: 16pt; font-family: Segoe UI-Bold;">75%</span> behind schedule on :</p>
+            <div class="underline-container">
+                <h1 class="perubahan-judul" style="font-size: 46pt;">KWH</h1>
+            </div>
+            <br>
+            <p class="guru">With:<br>Ibu Jessica Rabi</p>
+            <span class="filled-progress">Progress : 34%</span>
+            <a href="mapel.html">
+                <div class="box-one-button">
+                    <div class="circle-hover"></div>
+                    <span>Read Now</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="list-container">
+            <div class="header-menu">
+                <span class="pointer">
+                    <p>All Progress</p>
+                    <img class="all-progress-lup" src="img/icons/search.svg">
+                    <input class="headline-search" type="text" placeholder="type here...">
+                </span>
+                <img src="img/icons/close.svg" class="search-close-headline">
+                <div class="dropdown sort">
+                    <p class="caption">Ascending</p>
+                    <img src="img/icons/arrow-down.svg">
+                    <div class="listy">
+                      <div class="item">Ascending</div>
+                      <div class="item">Descending</div>
+                    </div>
+                </div>
+                <div class="dropdown type" style="margin-right: 20px;">
+                    <p class="caption">Progress</p>
+                    <img src="img/icons/arrow-down.svg">
+                    <div class="listy">
+                      <div class="item">Progress</div>
+                      <div class="item">Date</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar yang aat ini tengah dibicarakan oleh orang-orang penting, seperti Steve Jobs dan Lionel Messi</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Mempelajari Past Tense dan Past Future Tense</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar yang aat ini tengah dibicarakan oleh orang-orang penting, seperti Steve Jobs dan Lionel Messi</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar yang aat ini tengah dibicarakan oleh orang-orang penting, seperti Steve Jobs dan Lionel Messi</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar yang aat ini tengah dibicarakan oleh orang-orang penting, seperti Steve Jobs dan Lionel Messi</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+            <a href="mapel.html">
+                <div class="list">
+                    <span class="filled-progress onlist">Progress : 34%</span>
+                    <div class="mapel">MTK</div>
+                    <div class="guru-container"><p class="guru">with<br>Bpk Nursoleh Abas</p></div>
+                    <div class="materi-container"><p class="materi">Persamaan Kasus Trigonometri dengan Kasus Aljabar yang aat ini tengah dibicarakan oleh orang-orang penting, seperti Steve Jobs dan Lionel Messi</p></div>
+                    <div class="jadwal"><img src="img/icons/calendar(white).svg">Senin, 17 Mar 2020</div>
+                </div>
+            </a>
+        </div>
+
+
+        <img class="bottom-accessories" src="img/accessories2.png">
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

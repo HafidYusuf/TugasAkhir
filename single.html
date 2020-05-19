@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Dashboard || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+    <div id="_progress"></div>
+
+    <nav>
+
+        <div class="leftbar-menu">
+            <a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>
+            <h1 class="leftbar-mapel">IPA</h1>
+            <p class="leftbar-progress">Progress: 38%</p>
+            <p class="leftbar-judul">Perbedaan Kamuflase yang Dilakukan Hewan Amfibi Terhadap Hewan Mamalia</p>
+            <br />
+            <div class="schedule-time">
+                <img src="img/icons/clock.svg">
+                <p class="bold">08:30 - 10:00</p>
+            </div>
+        </div>
+
+        <div class="logout" id="goback" style="left: 40%">
+            <img src="img/icons/arrow-back.svg" />
+            <p style="color: #FF6D64; font-size: 10pt;">Go Back</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+        <br/>
+
+        <div class="theory-container">
+            <p>Pembahasan kali ini adalah :</p>
+            <h1 class="theory-topic">Perbedaan Kamuflase yang Dilakukan Hewan Amfibi Terhadap Hewan Mamalia</h1>
+            <p class="theory-teacher">Ibu Jessica Iskandar</p>
+            <span class="filled-progress onlist">
+                <div class="schedule-time">
+                    <img src="img/icons/clock(white).svg" style="margin: 0px 5px 2px 0px">
+                    <p class="bold" style="color: white;">08:30 - 10:00</p>
+                </div>
+            </span>
+
+            <div class="theory">
+                <h4>Class Introduction</h4>
+                <p>We all know the Interaction design is a practice of designing interactive digital products, systems and services. As you know, interaction design involves the user flow diagramming, wireframing and visual designing, sometimes referred to as UI designing. To make a better interaction design, a designer has to consider a lot of factors such as the business, users, empathy, environment, technology, usability and accessibility. Designers do believe that accessing these factors help the business grow. At a point of time, the designers become expert in the interaction design and they make a usable and meaningful user interface. But, the designers' job doesn’t end there. Will the easy-usable and meaningful interfaces help the business grow?</p>
+                <p>Let me start with a story here. I had an opportunity to work on a project which is based on the crowd investment. Crowd investing is something similar to crowdfunding such platforms as Kickstarter and IndieGoGo. While crowdfunding platforms allow users to fund to the projects they’re interested in but no returns other than complimentary gifts, crowd investing platforms get the returns to users based on the project’s revenue.</p>
+                <p>Designing the interaction for a crowd investing platform is quite easy for an intermediate skilled designer. The prototype would be having a project list page with features such as search, sort and filter, project detailed page with maximum information available to the project and a so-called CTA button ‘INVEST NOW’.</p>
+                <div class="theory-image">
+                    <img src="img/frog.jpg">
+                    <div class="img-source"><a href="https://www.theweek.in/news/sci-tech/2019/12/10/Novel-telephonic-device-used-to-dial-up-and-survey-frogs-in-their-habitat-Study.html">The Week : Frog Habitat Study</a></div>
+                </div>
+                <p>I had an opportunity to work on a project which is based on the crowd investment. Crowd investing is something similar to crowdfunding such platforms as Kickstarter and IndieGoGo. While crowdfunding platforms allow users to fund to the projects they’re interested in but no returns other than complimentary gifts, crowd investing platforms get the returns to users based on the project’s revenue.</p>
+                <a href="test.html"><div class="test-button">Take a Test Now</div></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $("#goback").click(function() {
+            history.back();
+        });
+
+        document.addEventListener( "scroll", function() {
+            var scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
+            var scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight;
+    
+            scrollPercent = scrollTop / scrollBottom * 100 + "%";
+            document.getElementById("_progress").style.setProperty("--scroll", scrollPercent);
+        },{ passive: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Progress Belajar || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+
+
+    <nav>
+        <!--<a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>-->
+        <img src="img/profile/1.png"  class="profile" />
+        <div class="name">Laura Cyntia</div>
+        <div class="class">X IPA 2</div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-list">
+                    <img src="img/icons/dashboard.svg" />
+                    <p>Dashboard</p>
+                </div></a>
+            <a href="progress.html">
+                <div class="menu-list">
+                    <img src="img/icons/progress.svg" />
+                    <p>Progress</p>
+                </div></a>
+            <a href="schedule.html">
+                <div class="menu-list active">
+                    <img src="img/icons/schedule.svg" />
+                    <p>Schedule</p>
+                </div></a>
+            <a href="discussion.html">
+                <div class="menu-list">
+                    <img src="img/icons/discussion.svg" />
+                    <p>Discussion</p>
+                </div></a>
+        </div>
+
+        <div class="logout">
+            <img src="img/icons/logout.svg" />
+            <p>Log Out</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+        <h1 class="hari" style="margin-top: 30px;">Your Weekly Subject</h1>
+        <div style="margin-top: 60px;"></div>
+        <div class="schedule-box-container">
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Monday</h1>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Tuesday</h1>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Wednesday</h1>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="schedule-box-container">
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Thursday</h1>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Friday</h1>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mapel.html">
+                    <div class="schedule-list">
+                        <div class="schedule-time">
+                            <img src="img/icons/clock.svg">
+                            <p>08:30 - 10:00</p>
+                        </div>
+                        <div class="schedule-teacher">
+                            <p>Ibu Jesica Iskandar</p>
+                        </div>
+                        <div class="schedule-mapel">
+                            <p>IPA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="schedule-box">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <h1 class="hari" style="margin-bottom: 30px;">Weekend</h1>
+                <img class="happy" src="img/female happy.svg">
+            </div>
+        </div>
+
+        <img class="bottom-accessories" src="img/accessories2.png">
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

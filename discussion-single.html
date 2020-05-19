@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Progress Belajar || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+
+
+    <nav>
+        <!--<a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>-->
+        <img src="img/profile/1.png"  class="profile" />
+        <div class="name">Laura Cyntia</div>
+        <div class="class">X IPA 2</div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-list">
+                    <img src="img/icons/dashboard.svg" />
+                    <p>Dashboard</p>
+                </div></a>
+            <a href="progress.html">
+                <div class="menu-list">
+                    <img src="img/icons/progress.svg" />
+                    <p>Progress</p>
+                </div></a>
+            <a href="schedule.html">
+                <div class="menu-list">
+                    <img src="img/icons/schedule.svg" />
+                    <p>Schedule</p>
+                </div></a>
+            <a href="discussion.html">
+                <div class="menu-list active">
+                    <img src="img/icons/discussion.svg" />
+                    <p>Discussion</p>
+                </div></a>
+        </div>
+
+        <div class="logout">
+            <img src="img/icons/logout.svg" />
+            <p>Log Out</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+
+        <div class="thread-left-single">
+            <div class="tabs-container">
+                <div class="thread">
+                    <p class="thread-judul" style="font-family: Segoe UI-Bold; font-size: 14pt; margin: 10px 0px 30px 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                        faucibus in posuere eu, pulvinar eu turpis.<span class="thread-status" style="margin: 0px 0px 5px 10px;">Solved</span></p>
+                        
+                    <img class="thread-pic" src="img/profile/6.png">
+                    <div class="thread-datadiri">
+                        <p class="thread-name">Adam Aji Riadi</p>
+                        <p class="thread-time">4 Days ago</p>
+                    </div>
+                    <div class="thread-mapel" style="float: none; display: inline-block; margin-left: 30px">IPA</div>
+                    <div class="thread-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor lacus odio, vel laoreet orci volutpat vestibulum. Ut nisi tellus, tempor ut vulputate non, ornare sit amet ante. Maecenas feugiat posuere sem ac scelerisque. Vivamus volutpat convallis elit eget mollis. Duis at cursus odio, in vehicula odio. Sed varius leo sit amet urna tempor, a commodo metus pretium. Sed porta ex at ipsum venenatis commodo. Donec fringilla orci vitae consectetur iaculis. Vestibulum a sapien magna.</p>
+                        <p>Donec consectetur metus vel massa tristique rutrum. Donec consectetur metus vel massa tristique rutrum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor lacus odio, vel laoreet orci volutpat vestibulum. Ut nisi tellus, tempor ut vulputate non, ornare sit amet ante.</p>
+                    </div>
+                </div>
+            <div class="tabs-container">
+                <div class="thread">
+                    <img class="thread-pic" src="img/profile/1.png">
+                    <textarea class="textarea-comment" placeholder="Write your comment here..."></textarea>
+                    <div class="thread-footer">
+                        <a href="#">
+                            <div class="post-comment">Post Comment</div>
+                        </a>
+                        <div class="input-something">
+                            <div class="input">
+                                <label for="file-input">
+                                    <img src="img/icons/file.svg"/>
+                                </label>
+                                <input id="file-input" type="file">
+                            </div>
+                            <div class="input">
+                                <label for="file-input">
+                                    <img src="img/icons/link.svg"/>
+                                </label>
+                                <input id="file-input" type="file">
+                            </div>
+                            <div class="input">
+                                <label for="file-input">
+                                    <img src="img/icons/image.svg"/>
+                                </label>
+                                <input id="file-input" type="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="total-replies-headline">4 Replies</div>
+            <div class="replies">
+                <img class="thread-pic" src="img/profile/6.png">
+                <div class="thread-datadiri">
+                    <p class="thread-name">Adam Aji Riadi</p>
+                    <p class="thread-time">4 Days ago</p>
+                </div>
+                <div class="replies-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor lacus odio, vel laoreet orci volutpat vestibulum. Ut nisi tellus, tempor ut vulputate non, ornare sit amet ante. Maecenas feugiat posuere sem ac scelerisque. Vivamus volutpat convallis elit eget mollis. Duis at cursus odio, in vehicula odio.</div>
+                <div class="replies-footer">
+                    <div class="replies-like liked">
+                        <div class="thecont">
+                            <img src="img/icons/heart.svg">
+                        </div>
+                        <p>21 Likes</p>
+                    </div>
+                    <div class="circle-seket"></div>
+                    <div class="replies-comment">
+                        <img src="img/icons/comment.svg">
+                        <p>2 Replies</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <img class="thread-pic" src="img/profile/6.png">
+                    <div class="thread-datadiri">
+                        <p class="thread-name">Anthony Marquez</p>
+                        <p class="thread-time">5 Days ago</p>
+                    </div>
+                    <div class="replies-p">Yes, that's works for me, Thanks</div>    
+                </div>
+                <div class="comment">
+                    <img class="thread-pic" src="img/profile/6.png">
+                    <div class="thread-datadiri">
+                        <p class="thread-name">Linda Algebra</p>
+                        <p class="thread-time">6 Days ago</p>
+                    </div>
+                    <div class="replies-p">Thanks for sharing, I actually have the same problem, but it's already solved. Great Answer</div>    
+                </div>
+            </div>
+            <div class="replies">
+                <img class="thread-pic" src="img/profile/6.png">
+                <div class="thread-datadiri">
+                    <p class="thread-name">Adam Aji Riadi</p>
+                    <p class="thread-time">4 Days ago</p>
+                </div>
+                <div class="replies-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor lacus odio, vel laoreet orci volutpat vestibulum. Ut nisi tellus, tempor ut vulputate non, ornare sit amet ante. Maecenas feugiat posuere sem ac scelerisque. Vivamus volutpat convallis elit eget mollis. Duis at cursus odio, in vehicula odio.</div>
+                <div class="replies-footer">
+                    <div class="replies-like">
+                        <div class="thecont">
+                            <img src="img/icons/heart.svg">
+                        </div>
+                        <p>21 Likes</p>
+                    </div>
+                    <div class="circle-seket"></div>
+                    <div class="replies-comment">
+                        <img src="img/icons/comment.svg">
+                        <p>2 Replies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script src="js/main.js"></script>
+    <script>
+        
+    var scaleCurve = mojs.easing.path('M0,100 L25,99.9999983 C26.2328835,75.0708847 19.7847843,0 100,0');
+    // var el = document.querySelectorAll('.thecont');
+    $(".thecont").each(function(i,el){
+        
+        var elContainer = el.closest('.replies-like'),
+        elSpan = el.querySelector('.replies-like img');
+        // mo.js timeline obj
+        var timeline = new mojs.Timeline(),
+
+        // tweens for the animation:
+
+        // burst animation
+        
+        tween1 = new mojs.Burst({
+            parent: el,
+            duration: 1500,
+            shape : 'circle',
+            fill : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
+            opacity: 0.6,
+            childOptions: { radius: {20:0} },
+            radius: {20:40},
+            count: 8,
+            isSwirl: true,
+            easing: mojs.easing.bezier(0.1, 1, 0.3, 1)
+        }),
+
+        // ring animation
+        tween2 = new mojs.Transit({
+            parent: el,
+            duration: 750,
+            type: 'circle',
+            radius: {0: 20},
+            fill: 'transparent',
+            stroke: '#988ADE',
+            strokeWidth: {15:0},
+            opacity: 0.6,
+            easing: mojs.easing.bezier(0, 1, 0.5, 1)
+        }),
+        // icon scale animation
+        tween3 = new mojs.Tween({
+            duration : 900,
+            onUpdate: function(progress) {
+                var scaleProgress = scaleCurve(progress);
+                elSpan.style.WebkitTransform = elSpan.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
+            }
+        });
+        timeline.add(tween1, tween2, tween3);
+        elContainer.addEventListener('click', function() {
+            if(!elContainer.classList.contains("liked")){
+                timeline.replay();
+            }
+        });
+        
+    });
+
+    $(".replies-like").click(function(){
+        $(this).toggleClass("liked");
+    });
+
+
+    // add tweens to timeline:
+
+    // });
+    
+    // when clicking the button start the timeline/animation:
+    // $(".replies-like").click(function(){
+    //     timeline.replay();
+    // });
+    // elContainer.addEventListener('click', function() {
+    //     timeline.replay();
+    // });
+    </script>
+</body>
+</html>

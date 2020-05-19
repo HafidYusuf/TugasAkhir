@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="app.css">
+    <title>Progress Belajar || Laura Cyntia</title>
+    <script>
+        function startTime() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate()+' '+monthNames[today.getMonth()]+' '+today.getFullYear();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById('time').innerHTML = h + ":" + m;
+            document.getElementById('date').innerHTML = d;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    
+    <!--
+        Preloader Scene
+    -->
+    <div class="loader-container">
+        <span class="loader"><span class="loader-inner"></span><img src="img/icons/Smiley.svg"></span>
+    </div>
+
+
+    <nav>
+        <!--<a href="index.html" alt="Dashboard"><img src="img/Logo.svg" class="logo"/></a>-->
+        <img src="img/profile/1.png"  class="profile" />
+        <div class="name">Laura Cyntia</div>
+        <div class="class">X IPA 2</div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-list">
+                    <img src="img/icons/dashboard.svg" />
+                    <p>Dashboard</p>
+                </div></a>
+            <a href="progress.html">
+                <div class="menu-list">
+                    <img src="img/icons/progress.svg" />
+                    <p>Progress</p>
+                </div></a>
+            <a href="schedule.html">
+                <div class="menu-list">
+                    <img src="img/icons/schedule.svg" />
+                    <p>Schedule</p>
+                </div></a>
+            <a href="discussion.html">
+                <div class="menu-list active">
+                    <img src="img/icons/discussion.svg" />
+                    <p>Discussion</p>
+                </div></a>
+        </div>
+
+        <div class="logout">
+            <img src="img/icons/logout.svg" />
+            <p>Log Out</p>
+        </div>
+    </nav>
+
+    <div class="light-bg">
+        <div class="light-blue-long"></div>
+        <div class="light-white"></div>
+        <div class="light-blue"></div>
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="borderline time">
+                <img src="img/icons/clock.svg">
+                <p id="time"></p>
+            </div>
+            <div class="borderline date">
+                <img src="img/icons/calendar.svg">
+                <p id="date"></p>
+            </div>
+        </div>
+
+        <div class="thread-left">
+        <h1 class="hari" style="margin-top: 30px;">Discussion Forum</h1>
+        <p class="tungpaktingting">In this page, you can ask about any lesson related problem you have by clicking the button on the right side</p>
+            <div class="tabs tabs-active" onclick="openPage('recentThread')" id="defaultOpen">
+                <p>Recent Thread</p>
+            </div>
+            <div class="tabs" onclick="openPage('myThread')">
+                <p>My Thread</p>
+            </div>
+            <div class="tabs">
+                <img src="img/icons/search.svg" style="margin: 0px 5px 2px 0px;">
+                <input type="text" placeholder="Search Thread" width="100px">
+                <img src="img/icons/close.svg" class="search-close-headline">
+            </div>
+    
+            <div class="tabs-container tabs-recent" id="recentThread">
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/6.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Adam Aji Riadi</p>
+                            <p class="thread-time">4 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/6.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Adam Aji Riadi</p>
+                            <p class="thread-time">4 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/6.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Adam Aji Riadi</p>
+                            <p class="thread-time">4 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/6.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Adam Aji Riadi</p>
+                            <p class="thread-time">4 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="tabs-container" id="myThread">
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/1.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Laura Cyntia</p>
+                            <p class="thread-time">1 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="discussion-single.html">
+                    <div class="thread">
+                        <img class="thread-pic" src="img/profile/1.png">
+                        <div class="thread-datadiri">
+                            <p class="thread-name">Laura Cyntia</p>
+                            <p class="thread-time">10 Days ago</p>
+                        </div>
+                        <div class="thread-mapel">IPA</div>
+                        <p class="thread-judul">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris dui, 
+                            faucibus in posuere eu, pulvinar eu turpis.</p>
+                        <div class="thread-footer">
+                            <div class="pics">
+                                <img src="img/profile/2.png">
+                                <img src="img/profile/3.png">
+                                <img src="img/profile/4.png">
+                            </div>
+                            <p class="total-replies">6 Replies</p>
+                            <div class="circle-seket"></div>
+                            <p class="thread-status">Solved</p>
+                        </div>
+                    </div>
+                </a>
+            </div>    
+        </div>
+
+        
+        <div class="thread-right">
+            <div class="box-writethread">
+                <img class="just-accessories" src="img/accessories.svg" />
+                <img class="just-accessories-two" src="img/accessories blue.svg" />
+                <p>Do you have a problem with your Lesson ?</p>
+                <div class="button-writethread"><img src="img/icons/plus.svg">Write a Thread</div>
+                <img class="char-confused" src="img/female confused.svg"/>
+            </div>
+
+            <div class="discussion-sidebar" id="scroll-fixed">
+                <p><strong>Unsolved Thread</strong></p>
+                <a href="discussion-single.html">
+                    <div class="discussion-sidebar-box">
+                        <img src="img/profile/1.png">
+                        <h4>Gina Rosinta</h4>
+                        <div class="discussion-sidebar-box-date">4 Days Ago</div>
+                        <p>Ini penjelasan tentang materi kemaren yang belum sempat dijelaskan</p>
+                    </div>
+                </a>
+                <a href="discussion-single.html">
+                    <div class="discussion-sidebar-box">
+                        <img src="img/profile/1.png">
+                        <h4>Gina Rosinta</h4>
+                        <div class="discussion-sidebar-box-date">4 Days Ago</div>
+                        <p>Ini penjelasan tentang materi kemaren yang belum sempat dijelaskan</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="overlay">
+        <div class="thread-input-container">
+            <div class="top-header">
+                <div>
+                    <img src="img/icons/close.svg">
+                </div>
+            </div>
+            <img class="profile-image-input" src="img/profile/1.png">
+            <div class="profile-input">
+                <p class="myname">Cyntia Laura</p>
+                <div class="circle-seket"></div>
+                <p>X IPA 2</p>
+            </div>
+            <p class="choose-particular">Choose your particular Subject :</p>
+            <div class="carousel-input-container">
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+                <div class="carousel-input-item">IPA</div>
+            </div>
+            <form>
+                <textarea class="judul-problem" type="text" placeholder="Write Your Problem Here..."></textarea>
+                <textarea class="textarea-comment" placeholder="Write your comment here..." style="margin-left: 25px; width: calc(100% - 50px)"></textarea>
+                <div class="thread-footer">
+                    <div class="input-something" style="width: calc(100% - 80px);">
+                        <div class="input" style="margin-top: 10px;">
+                            <label for="file-input">
+                                <img src="img/icons/file.svg"/>
+                            </label>
+                            <input id="file-input" type="file">
+                        </div>
+                        <div class="input">
+                            <label for="file-input">
+                                <img src="img/icons/link.svg"/>
+                            </label>
+                            <input id="file-input" type="file">
+                        </div>
+                        <div class="input">
+                            <label for="file-input">
+                                <img src="img/icons/image.svg"/>
+                            </label>
+                            <input id="file-input" type="file">
+                        </div>
+                        <a href="#" style="float: right;">
+                            <div class="post-comment">Post Comment</div>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--
+        If Screen Size is Too Small
+    -->
+    <div class="screen-blocker">
+        <div>
+            <img src="img/Logo.svg">
+            <h4>Sorry, your screen size is too small</h4>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script src="js/main.js"></script>
+    <script>
+        
+    TweenMax.set($(".overlay"), {autoAlpha: 0});
+    TweenMax.set($(".thread-input-container"), {y: '100%'});
+
+    $(".button-writethread").click(function() {
+        TweenMax.to($(".overlay"), .5, {autoAlpha: 1});
+        TweenMax.to($(".thread-input-container"), 1, {y: '0%', ease: Power4.easeOut});
+    })
+
+    $(".top-header div").click(function() {
+        TweenMax.to($(".overlay"), .5, {autoAlpha: 0, delay: .5});
+        TweenMax.to($(".thread-input-container"), 1, {y: '100%', ease: Back.easeIn.config(1.7)});
+    });
+
+        $('.carousel-input-container').on('scroll', function() {
+            var top =
+                $('.carousel-input-container').scrollLeft();
+            // $('.header').css('left', -top);
+            console.log(top);
+            $('.gradient-blocker').css('left', top);
+        });
+
+        const slider = document.querySelector('.carousel-input-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1.5; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+            console.log(walk);
+        
+        });
+    </script>
+</body>
+</html>
