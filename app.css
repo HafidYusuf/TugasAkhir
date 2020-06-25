@@ -929,6 +929,7 @@ nav .menu .menu-list p {
 }
 
 .list .mapel {
+  width: 100px;
   color: #FFA367;
   font-family: Segoe UI-SemiBold;
   font-size: 24pt;
@@ -957,7 +958,7 @@ nav .menu .menu-list p {
 
 .list .materi-container {
   position: absolute;
-  left: 415px;
+  left: 450px;
   right: 200px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1914,6 +1915,7 @@ a {
 }
 
 .leftbar-menu {
+  opacity: 0;
   text-align: left;
   width: 110px;
   top: 45%;
@@ -1921,6 +1923,8 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: absolute;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
 }
 
 .leftbar-menu a {
@@ -2026,5 +2030,58 @@ a {
   height: 5px;
   top: 0px;
   z-index: 100;
+}
+
+.link {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.link-line {
+  width: 5px;
+  background: #FFA367;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+.link-par {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.link-par a {
+  text-decoration: underline;
+}
+
+.linked {
+  width: 200px;
+  display: inline-block;
+}
+
+.link-container {
+  margin-left: 30px;
+}
+
+.link-container p {
+  margin-bottom: 10px;
+}
+
+.links {
+  width: 55%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.links a {
+  text-decoration: underline;
+  font-size: 16pt;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 /*# sourceMappingURL=app.css.map */

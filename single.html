@@ -99,6 +99,15 @@
                     <div class="img-source"><a href="https://www.theweek.in/news/sci-tech/2019/12/10/Novel-telephonic-device-used-to-dial-up-and-survey-frogs-in-their-habitat-Study.html">The Week : Frog Habitat Study</a></div>
                 </div>
                 <p>I had an opportunity to work on a project which is based on the crowd investment. Crowd investing is something similar to crowdfunding such platforms as Kickstarter and IndieGoGo. While crowdfunding platforms allow users to fund to the projects they’re interested in but no returns other than complimentary gifts, crowd investing platforms get the returns to users based on the project’s revenue.</p>
+                <div class="link">
+                    <p>Lampiran Materi Hari Ini:</p>
+                    <div class="link-line"></div>
+                    <div class="link-container">
+                        <p><p class="linked">Lampiran Tugas</p> : <div class="links"><a href="#">Materi Lampiran.pptx</a></div>
+                        <p><p class="linked">Lampiran Materi</p> : <div class="links"><a href="#">Materi Lampiran.pptx</a></div>
+                        <p><p class="linked">Lampiran Link</p> : <div class="links"><a href="#">https://medium.com/the-mission/the-greatest-sales-deck-ive-ever-seen-4f4ef3391ba0</a></div>
+                    </div>
+                </div>
                 <a href="test.html"><div class="test-button">Take a Test Now</div></a>
             </div>
         </div>
@@ -134,6 +143,22 @@
             scrollPercent = scrollTop / scrollBottom * 100 + "%";
             document.getElementById("_progress").style.setProperty("--scroll", scrollPercent);
         },{ passive: true });
+
+        
+        $(window).scroll(function(){
+        var wScroll = $(this).scrollTop();
+        
+        if(wScroll > $('.theory').offset().top) {
+            $('.leftbar-menu').css(
+                'opacity', '1'
+            ); 
+        }
+        else {
+            $('.leftbar-menu').css(
+                'opacity', '0'
+            ); 
+        }
+        });
     </script>
 </body>
 </html>

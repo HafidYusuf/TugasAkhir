@@ -785,6 +785,7 @@ nav {
         margin-right: 0px!important;
     }
     .mapel {
+        width: 100px;
         color: $orange;
         font-family: Segoe UI-SemiBold;
         font-size: 24pt;
@@ -810,7 +811,7 @@ nav {
     }
     .materi-container {
         position: absolute;
-        left: 415px;
+        left: 450px;
         right: 200px;
         top: 50%;
         transform: translateY(-50%);
@@ -1590,12 +1591,14 @@ a {
 }
 
 .leftbar-menu {
+    opacity: 0;
     text-align: left;
     width: 110px;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    transition: opacity .2s ease-out;
     a {
         text-decoration: none;
     }
@@ -1678,11 +1681,55 @@ a {
     }
 }
 #_progress {
-      --scroll: 0%;
-      background: linear-gradient(to right,$orange var(--scroll),transparent 0);
-      position: fixed;
-      width: 100%;
-      height: 5px;
-      top:0px;
-      z-index: 100;
-  }
+    --scroll: 0%;
+    background: linear-gradient(to right,$orange var(--scroll),transparent 0);
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top:0px;
+    z-index: 100;
+}
+.link {
+    margin-bottom: 50px;
+    position: relative;
+}
+.link-line {
+    width: 5px;
+    background: $orange;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    border-radius: 20px;
+}
+.link-par {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    a {
+        text-decoration: underline;
+    }
+}
+.linked {
+    width: 200px;
+    display: inline-block;
+}
+.link-container {
+    margin-left: 30px;
+    p {
+        margin-bottom: 10px;
+    }
+}
+.links {
+    width: 55%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    a {
+        text-decoration: underline;
+        font-size: 16pt;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
